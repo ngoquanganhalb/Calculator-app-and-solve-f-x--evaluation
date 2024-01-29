@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1100.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Controller">
+    <stylesheets>
+        <URL value="@caculator.css" />
+    </stylesheets>
+   <children>
+      <BorderPane layoutX="179.0" layoutY="58.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <AnchorPane prefHeight="598.0" prefWidth="1368.0" styleClass="background" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="expTextField" layoutX="60.0" layoutY="65.0" prefHeight="86.0" prefWidth="736.0" promptText="Enter your expression" styleClass="text-field">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </TextField>
+                  <Button layoutX="338.0" layoutY="169.0" mnemonicParsing="false" onAction="#calculate" prefHeight="72.0" prefWidth="106.0" styleClass="round-buttoncal" text="Calculate" textFill="#dc0a0a">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Button>
+                  <TextField layoutX="60.0" layoutY="169.0" prefHeight="72.0" prefWidth="268.0" promptText="Enter x" fx:id="xTextField">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </TextField>
+                  <AnchorPane layoutX="50.0" layoutY="249.0" prefHeight="330.0" prefWidth="699.0">
+                     <children>
+                        <Button layoutX="200.0" layoutY="266.0" mnemonicParsing="false" onAction="#nine" prefHeight="57.0" prefWidth="79.0" styleClass="round-button" text="9">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="14.0" layoutY="116.0" mnemonicParsing="false" onAction="#one" prefHeight="57.0" prefWidth="79.0" styleClass="round-button" text="1">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="14.0" layoutY="192.0" mnemonicParsing="false" onAction="#four" prefHeight="57.0" prefWidth="79.0" styleClass="round-button" text="4">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="14.0" layoutY="266.0" mnemonicParsing="false" onAction="#seven" prefHeight="57.0" prefWidth="79.0" styleClass="round-button" text="7">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="200.0" layoutY="192.0" mnemonicParsing="false" onAction="#six" prefHeight="57.0" prefWidth="79.0" styleClass="round-button" text="6">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="200.0" layoutY="116.0" mnemonicParsing="false" onAction="#three" prefHeight="57.0" prefWidth="79.0" styleClass="round-button" text="3">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="109.0" layoutY="116.0" mnemonicParsing="false" onAction="#two" prefHeight="57.0" prefWidth="79.0" styleClass="round-button" text="2">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="109.0" layoutY="192.0" mnemonicParsing="false" onAction="#five" prefHeight="57.0" prefWidth="79.0" styleClass="round-button" text="5">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="109.0" layoutY="266.0" mnemonicParsing="false" onAction="#eight" prefHeight="57.0" prefWidth="79.0" styleClass="round-button" text="8">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="427.0" layoutY="116.0" mnemonicParsing="false" onAction="#sin" prefHeight="57.0" prefWidth="79.0" styleClass="round-buttonham" text="sin">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="427.0" layoutY="192.0" mnemonicParsing="false" onAction="#tan" prefHeight="57.0" prefWidth="79.0" styleClass="round-buttonham" text="tan">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="427.0" layoutY="266.0" mnemonicParsing="false" onAction="#sinh" prefHeight="57.0" prefWidth="79.0" styleClass="round-buttonham" text="sinh">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="519.0" layoutY="116.0" mnemonicParsing="false" onAction="#cos" prefHeight="57.0" prefWidth="79.0" styleClass="round-buttonham" text="cos">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="519.0" layoutY="192.0" mnemonicParsing="false" onAction="#cot" prefHeight="57.0" prefWidth="79.0" styleClass="round-buttonham" text="cot">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="519.0" layoutY="266.0" mnemonicParsing="false" onAction="#cosh" prefHeight="57.0" prefWidth="79.0" styleClass="round-buttonham" text="cosh">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="297.0" layoutY="192.0" mnemonicParsing="false" onAction="#dong" prefHeight="57.0" prefWidth="79.0" styleClass="round-button" text="(">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="297.0" layoutY="266.0" mnemonicParsing="false" onAction="#mo" prefHeight="57.0" prefWidth="79.0" styleClass="round-button" text=")">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="607.0" layoutY="192.0" mnemonicParsing="false" onAction="#log" prefHeight="57.0" prefWidth="79.0" styleClass="round-buttonham" text="log()">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="607.0" layoutY="266.0" mnemonicParsing="false" onAction="#ln" prefHeight="57.0" prefWidth="79.0" styleClass="round-buttonham" text="ln">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="297.0" layoutY="116.0" mnemonicParsing="false" onAction="#zero" prefHeight="57.0" prefWidth="79.0" styleClass="round-button" text="0">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="14.0" layoutY="40.0" mnemonicParsing="false" onAction="#cong" prefHeight="57.0" prefWidth="79.0" styleClass="round-buttonham" text="+" textFill="WHITE">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="109.0" layoutY="40.0" mnemonicParsing="false" onAction="#tru" prefHeight="57.0" prefWidth="79.0" styleClass="round-buttonham" text="-">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="200.0" layoutY="40.0" mnemonicParsing="false" onAction="#nhan" prefHeight="57.0" prefWidth="79.0" styleClass="round-buttonham" text="*">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="297.0" layoutY="40.0" mnemonicParsing="false" onAction="#chia" prefHeight="57.0" prefWidth="79.0" styleClass="round-buttonham" text="/">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="427.0" layoutY="41.0" mnemonicParsing="false" onAction="#mu" prefHeight="57.0" prefWidth="79.0" styleClass="round-buttonham" text="^">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="607.0" layoutY="116.0" mnemonicParsing="false" onAction="#abs" prefHeight="57.0" prefWidth="79.0" styleClass="round-buttonham" text="abs">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="519.0" layoutY="41.0" mnemonicParsing="false" onAction="#can" prefHeight="57.0" prefWidth="79.0" styleClass="round-buttonham" text="sqrt">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="607.0" layoutY="41.0" mnemonicParsing="false" onAction="#x" prefHeight="57.0" prefWidth="79.0" styleClass="round-buttonham" text="x">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Button>
+                        <Separator layoutX="399.0" layoutY="50.0" orientation="VERTICAL" prefHeight="269.0" prefWidth="3.0" />
+                     </children>
+                  </AnchorPane>
+                  <Button layoutX="656.0" layoutY="183.0" mnemonicParsing="false" onAction="#ac" prefHeight="57.0" prefWidth="79.0" styleClass="round-buttonac" text="AC">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="262.0" layoutY="14.0" prefHeight="55.0" prefWidth="293.0" styleClass="bold-text" text="Math Calculator" textFill="WHITE">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="452.0" layoutY="170.0" mnemonicParsing="false" onAction="#findX" prefHeight="70.0" prefWidth="104.0" styleClass="round-buttonfind" text="Find X" textFill="#18396b">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="565.0" layoutY="182.0" minWidth="85.0" mnemonicParsing="false" onAction="#del" prefHeight="62.0" prefWidth="85.0" styleClass="round-buttondel" text="Del">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="875.0" layoutY="123.0" prefHeight="36.0" prefWidth="102.0" styleClass="bold-text" text="Result :" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="areafield" layoutX="780.0" layoutY="169.0" prefHeight="122.0" prefWidth="292.0" styleClass="text-area" wrapText="true">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect></TextArea>
+                  <Button layoutX="806.0" layoutY="296.0" mnemonicParsing="false" onAction="#diagram" prefHeight="43.0" prefWidth="236.0" styleClass="nav-btn" text="Xem đồ thị" underline="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Button>
+                 
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
